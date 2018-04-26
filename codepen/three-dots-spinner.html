@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    
+    <title>
+        
+            3 dots spinner - Ivan Bogachev | Musician and UI Developer
+        </title>
+    <meta name='description' content='This is a simple spinner with interesting effects. It can be used as full-page loading indicator.'>
+
+    <link rel='canonical' href='https://sfi0zy.github.io/codepen/three-dots-spinner'>
+    <link rel='alternate' type='application/rss+xml' title='Ivan Bogachev | Musician and UI Developer' href='https://sfi0zy.github.io/feed.xml'>
+    
+    <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png?t=05261'>
+    <link rel='icon' type='image/png' href='/favicon-32x32.png?t=05261' sizes='32x32'>
+    <link rel='icon' type='image/png' href='/favicon-16x16.png?t=05261' sizes='16x16'>
+    <link rel='manifest' href='/site.webmanifest.json?t=05261'>
+    <meta name='msapplication-TileColor' content='#1c1c1c'>
+    <meta name='theme-color' content='#cccccc'>
+
+    <style>.-white{color:#fff!important}.-grey-4{color:#424242!important}.-brown-3{color:#795548!important}.-green-3{color:#4caf50!important}.-white-bg{background:#fff!important}.-grey-1-bg{background:#fafafa!important}.-grey-5-bg{background:#212121!important}.-blue-2-bg{background:#90caf9!important}.-blue-3-bg{background:#2196f3!important}.-green-3-bg{background:#4caf50!important}._text-center{text-align:center!important}._smaller-1{font-size:.8em!important}@media screen and (max-width:600px){._smaller-1{font-size:1em!important}}@media screen and (max-width:400px){._smaller-1{font-size:1em!important}}._bigger-1{font-size:1.25em!important}._bigger-3{font-size:1.95em!important}._line-4r{line-height:64px!important;line-height:4rem!important}._left{float:left!important}._right{float:right!important}._separate-1{margin-top:16px!important;margin-top:1rem!important;margin-bottom:16px!important;margin-bottom:1rem!important}._shadow-1{box-shadow:0 0 4px rgba(0,0,0,.3)!important}html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,header,nav{display:block}h1{font-size:2em;margin:.67em 0}main{display:block}a{background-color:transparent;-webkit-text-decoration-skip:objects}b{font-weight:inherit;font-weight:bolder}img{border-style:none}svg:not(:root){overflow:hidden}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}*,:after,:before{margin:0;padding:0;box-sizing:border-box}html{height:100%;color:#000;background-color:#fff}body{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;min-height:100%;min-width:320px}a{color:#212121}a:visited{color:#212121}:focus{outline:none}div:empty:not(.indicator):not(.mui-navigation-toggle):not(._allow-empty):not(.mui-shadow-toggle):not(.scrollbar){display:none}h1,h2,h3{margin:0;padding:0;line-height:1.2}img{display:block;height:auto;max-width:100%}html{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;font-size:calc(14px + 6 * ((100vw - 400px) / 800));line-height:1.5}@media screen and (max-width:400px){html{font-size:14px}}@media screen and (min-width:1200px){html{font-size:20px}}h1{font-size:3.05em!important}h2{font-size:2.44em!important}h3{font-size:1.95em!important}.mui-row{display:-ms-flexbox;display:flex;-ms-flex:0 1 auto;flex:0 1 auto;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap}.mui-row.-s-middle{-ms-flex-align:center;align-items:center}@media screen and (min-width:600px){.mui-row.-m-top{-ms-flex-align:start;align-items:flex-start}}.mui-column{-ms-flex:0 0 auto;flex:0 0 auto;-ms-flex-positive:1;flex-grow:1;-ms-flex-preferred-size:0;flex-basis:0;max-width:100%}@media screen and (max-width:400px){.mui-column{-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}}.mui-column.-s12{-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}@media screen and (min-width:600px){.mui-column.-m4{-ms-flex-preferred-size:33.33333333%;flex-basis:33.33333333%;max-width:33.33333333%}.mui-column.-m8{-ms-flex-preferred-size:66.66666667%;flex-basis:66.66666667%;max-width:66.66666667%}.mui-column.-m12{-ms-flex-preferred-size:100%;flex-basis:100%;max-width:100%}}@media screen and (min-width:1200px){.mui-column.-l3{-ms-flex-preferred-size:25%;flex-basis:25%;max-width:25%}.mui-column.-l9{-ms-flex-preferred-size:75%;flex-basis:75%;max-width:75%}}.mui-button{display:inline-block;position:relative;padding:0 1em;font-size:16px;font-size:1rem;line-height:2;text-decoration:none;text-align:center;border:none;border-radius:.2rem}.mui-button,.mui-button:visited{color:#fff;background:#424242}.mui-button.-ghost{color:#000;background:transparent;border:1px solid #000}.mui-button.-icon{height:32px;height:2rem;width:32px;width:2rem;padding:0}.mui-card{display:block;position:relative;overflow:hidden;border-radius:.2rem}.mui-card>.header{text-align:center;color:#fff;background:#424242;border-top-left-radius:3.2px;border-top-left-radius:.2rem;border-top-right-radius:3.2px;border-top-right-radius:.2rem}.mui-card>.content,.mui-card>.header{padding:16px;padding:1rem}.mui-card.-with-image>.header{padding:0}.mui-card.-with-image>.header>img{width:100%}.mui-content-container{position:relative;width:90%;max-width:1100px;margin:0 auto}.mui-content-container:after{content:"";display:table;clear:both}.mui-page-container{-ms-flex:1 0 auto;flex:1 0 auto;overflow:auto}.mui-header-logo{display:inline-block;line-height:64px;line-height:4rem}.mui-header-navigation>.linkslist{list-style:none;margin:0}.mui-header-navigation>.linkslist>.item{display:inline-block;margin:0}.mui-header-navigation>.linkslist>.item>.link{display:inline-block;padding:0 calc((2rem * 2 - 1em) / 2);line-height:64px;line-height:4rem;text-decoration:none;color:#000}.mui-navigation-toggle.-hamburger{display:inline-block;position:relative;float:right;height:64px;height:4rem;line-height:64px;line-height:4rem;padding:0 16px;padding:0 1rem;font-size:32px;font-size:2rem;color:#424242}.mui-image{margin-left:auto;margin-right:auto}.mui-image.-js-lazy-load{opacity:0}.mui-image.-rounded{border-radius:.2rem}.mui-page-header{position:relative;max-height:64px;max-height:4rem}.mui-page-header:after{content:"";display:table;clear:both}.mui-post{position:relative;max-width:800px;max-width:50rem;padding:32px 32px 16px;padding:2rem 2rem 1rem}.mui-post-header{margin:0}.mui-post-header>.information{font-size:.8em!important}.mui-post-content{margin:32px 0;margin:2rem 0}.mui-scroll-fix{position:fixed;top:0;left:0;height:100vh;width:100%;z-index:100}.mui-shadow-toggle{position:fixed;left:0;top:0;z-index:10;height:100%;width:100%;background:transparent;opacity:0}.mui-svg-icon{display:inline-block;height:1em;max-height:1em;max-width:1em;transform:translateY(-10%);vertical-align:middle}.mui-svg-icon.-white{fill:#fff}.mui-svg-sprite{position:fixed}@font-face{font-family:'fontello';src:url('/fonts/fontello/fontello.woff2?201809061925') format('woff2'),url('/fonts/fontello/fontello.woff?201809061925') format('woff');font-weight:normal;font-style:normal}[class^='fa-']:before,[class*=' fa-']:before{font-family:'fontello';font-style:normal;font-weight:normal;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:.2em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;margin-left:.2em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.fa-book:before{content:'\e802'}.fa-github:before{content:'\f113'}a{text-decoration:none}._padding-lr-1{padding-left:1rem;padding-right:1rem}.mui-content-container{width:90%}@media screen and (max-width:800px){.mui-content-container{width:92%}}@media screen and (max-width:600px){.mui-content-container{width:95%}}@media screen and (max-width:400px){.mui-content-container{width:98%}}.mui-content-container .-sticky{will-change:transform}@media screen and (max-width:600px){.mui-column{padding:0 .5rem}}@media screen and (max-width:599px){.mui-column.-aside{order:2}}.mui-page-header{background:#212121;max-height:4rem}.mui-header-logo{padding-left:.5rem}.mui-button.-contact{display:inline-block;line-height:2rem;font-size:1em;margin-top:.3rem}.mui-post{border-radius:.2rem}.mui-post-header>.title{font-size:1.6rem;padding-right:4rem}.mui-post-content img{margin-top:1rem;margin-bottom:1rem}.logo-image{display:inline-block;height:3rem;width:3rem;vertical-align:middle;transform:translateY(-0.2rem);margin-right:.5rem}.logo-text{display:inline-block}.contacts-icons{border-radius:.2rem;padding:.5rem .2rem}.post-badge{display:inline-block;position:relative}.post-badge.-separated{margin-right:.2em}</style>
+
+</head>
+
+    <body itemscope itemtype='https://schema.org/Person'>
+        <div class='mui-scroll-fix'></div>
+        <!-- page-header -->
+<header class='mui-page-header -grey-5-bg _shadow-1'>
+    <!-- content-container -->
+    <div class='mui-content-container'>
+
+        <!-- header-logo -->
+        <div class='mui-header-logo _left'>
+            <a href='/' class='-white -f-blue-4' aria-label='home page of website'>
+                <svg class='logo-image' height='3rem' width='3rem' version="1.1" viewBox="0 0 354.33071 354.33071" xmlns="http://www.w3.org/2000/svg" >
+                    <g transform="translate(0 -698.03)">
+                        <path d="m168.74 846.74-0.10987-0.70579" fill="none" stroke="#fff" stroke-width="1px"/>
+                        <path d="m176.9 922.83c8.6734 3.067 18.189 3.7129 27.197 1.846 9.0083-1.8668 17.483-6.241 24.224-12.502 9.8646-9.1636 15.837-22.406 16.105-35.868 0.26725-13.461-5.1939-26.956-14.798-36.392-6.7687-6.6499-15.498-11.279-24.8-13.152s-19.143-0.98238-27.958 2.5299" fill="none" stroke="#fff" stroke-width="8"/>
+                        <path transform="matrix(.41685 2.6776 -2.6776 .41685 2359.4 408.06)" d="m36.429 863.79c1.0028 1.3609-1.3397 2.0231-2.2619 1.6667-2.499-0.966-2.4129-4.3414-1.0714-6.1905 2.3995-3.3076 7.2822-2.9979 10.119-0.47619 4.1632 3.7008 3.6071 10.265-0.11905 14.048-4.9664 5.041-13.264 4.227-17.976-0.71429-2.7895-2.9251-4.1868-6.9826-3.9525-11.003" fill="none" stroke="#fff" stroke-width="2.9522"/>
+                        <path d="m59.632 824.09 211.52-32.93" fill="none" stroke="#fff" stroke-width="8"/>
+                        <path transform="matrix(-.41685 -2.6776 2.6776 -.41685 -2027.5 1206.9)" d="m36.429 863.79c1.0028 1.3609-1.3397 2.0231-2.2619 1.6667-2.499-0.966-2.4129-4.3414-1.0714-6.1905 2.3995-3.3076 7.2822-2.9979 10.119-0.47619 4.1632 3.7008 3.6071 10.265-0.11905 14.048-4.9664 5.041-13.264 4.227-17.976-0.71429-2.6916-2.8225-4.0929-6.7053-3.971-10.591" fill="none" stroke="#fff" stroke-width="2.9522"/>
+                        <path transform="matrix(.41685 2.6776 -2.6776 .41685 2384.8 545.77)" d="m36.429 863.79c1.0028 1.3609-1.3397 2.0231-2.2619 1.6667-2.499-0.966-2.4129-4.3414-1.0714-6.1905 2.3995-3.3076 7.2822-2.9979 10.119-0.47619 4.1632 3.7008 3.6071 10.265-0.11905 14.048-4.9664 5.041-13.264 4.227-17.976-0.71429-2.7895-2.9251-4.1868-6.9826-3.9525-11.003" fill="none" stroke="#fff" stroke-width="2.9522"/>
+                        <path d="m84.995 961.8 211.52-32.93" fill="none" stroke="#fff" stroke-width="8"/>
+                        <path transform="matrix(-.41685 -2.6776 2.6776 -.41685 -2002.2 1344.6)" d="m36.429 863.79c1.0028 1.3609-1.3397 2.0231-2.2619 1.6667-2.499-0.966-2.4129-4.3414-1.0714-6.1905 2.3995-3.3076 7.2822-2.9979 10.119-0.47619 4.1632 3.7008 3.6071 10.265-0.11905 14.048-4.9664 5.041-13.264 4.227-17.976-0.71429-2.6916-2.8225-4.0929-6.7053-3.971-10.591" fill="none" stroke="#fff" stroke-width="2.9522"/>
+                        <path d="m147.03 748.25c-4.0742 0.74926-7.7926 3.2621-10.007 6.7628-2.1409 3.3839-2.8518 7.6416-1.9265 11.537 0.92536 3.8959 3.4749 7.3791 6.9088 9.4389 3.4339 2.0598 7.7073 2.6692 11.58 1.6513 3.8728-1.0178 7.2943-3.6496 9.2718-7.1315 1.407-2.4775 2.0906-5.3602 1.9459-8.2056-0.14466-2.8454-1.1171-5.6439-2.7681-7.9659-1.651-2.322-3.9749-4.1596-6.615-5.2307-2.6401-1.0711-5.5874-1.3721-8.3895-0.85677z" fill="none" stroke="#fff" stroke-width="8"/>
+                        <path d="m114.29 814.9 0.64285 141.43" fill="none" stroke="#fff" stroke-width="8"/>
+                        <path d="m175.36 805.26-59.786 152.36" fill="none" stroke="#fff" stroke-width="8"/>
+                        <path d="m176.65 947.33-1.2857-142.07" fill="none" stroke="#fff" stroke-width="8"/>
+                        <path d="m130.27 811.31 0.64285 141.43" fill="none" stroke="#fff" stroke-width="8"/>
+                        <path d="m192.08 945.73-1.2857-142.07" fill="none" stroke="#fff" stroke-width="8"/>
+                    </g>
+                </svg>
+
+                <h1 class='logo-text _bigger-1 _line-4r' itemprop='name'>Ivan Bogachev</h1>
+            </a>
+        </div>
+        <!-- /header-logo -->
+            
+        <!-- header-navigation -->
+        <nav class='mui-header-navigation -mobie-version _right'>
+            <div class='mui-navigation-toggle -hamburger -white -f-transparent-bg -f-blue-4' aria-label='Open main website navigation'>
+                <svg class='mui-svg-icon -white'><use xlink:href='#svg-icon--hamburger'></use></svg>
+            </div>
+            <ul class='linkslist'>
+                <li class='item _right'>
+                    <a class='link -white -f-blue-4 -f-transparent-bg' href='/about/'>About me</a>
+                    <a class='link -white -f-blue-4 -f-transparent-bg' href='/tag/publications/'>Publications</a>
+                    <a class='link -white -f-blue-4 -f-transparent-bg' href='/tag/music/'>Music</a>
+                </li>
+            </ul>
+            <div class='mui-navigation-toggle mui-shadow-toggle' aria-label='Close navigation'></div>
+        </nav>
+        <!-- header-navigation -->
+
+    </div>
+    <!-- /content-container -->
+</header>
+<!-- /page-header -->
+
+
+        <!-- page-container -->
+        <div class='mui-page-container -grey-1-bg'>
+            <!-- content-container -->
+            <div class='mui-content-container _separate-1'>
+                <!-- row -->
+                <div class='mui-row'>
+                    <!-- aside-column -->
+<aside class='mui-column -aside -s12 -m4 -l3'>
+    <!-- content-container -->
+    <div class='mui-content-container -sticky' id='aside-content'>
+
+        <!-- card (photo & info) -->
+        <div class='mui-card _shadow-1 _separate-1'>
+            <div class='content -white-bg _text-center'>
+                <div class='mui-row -s-middle -m-top'>
+                    <div class='mui-column -s12 -m12'>
+                        <img class='mui-image -rounded -js-lazy-load' data-src='/images/d5bd5bbed4b24e9fa61f098a04aae6fe.jpg' src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' alt='my photo' itemprop='image'>
+                        <noscript>
+                            <img class='mui-image -rounded' src='/images/d5bd5bbed4b24e9fa61f098a04aae6fe.jpg' alt='my photo' itemprop='image'>
+                        </noscript>
+                    </div>
+                    <div class='mui-column -s12 -m12'>
+                        <div class='_separate-1 _smaller-1'>
+                            <div itemprop='description'>Musician and UI Developer</div>
+                            <div class='-grey-4'>@<span itemprop='alternateName'>sfi0zy</span></div>
+                        </div>
+                        <div class='contacts-icons _separate-1'>
+                            <a class='mui-button -icon -contact -blue-2-bg -white -f-white -f-blue-4-bg' href='https://habr.com/users/sfi0zy/' title='My profile on Habr.com'><b role='presentation'>h</b></a>
+                            <a class='mui-button -icon -contact -grey-5-bg -white -f-white -f-blue-4-bg' href='https://github.com/sfi0zy' title='My GitHub profile'><i class='fa fa-github' role='presentation'></i></a>
+                            <a class='mui-button -icon -contact -blue-3-bg -f-blue-4-bg' href='https://t.me/sfi0zy' title='My Telegram'><svg class='mui-svg-icon -white'><use xlink:href='#svg-icon--plane'></use></svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /card (photo & info) -->
+
+        <!-- card (looking for job) -->
+        <div class='mui-card -looking-for-job -white -green-3-bg _shadow-1 _separate-1'>
+            <div class='content -white _text-center _smaller-1'>
+                <div class='_bigger-3'>
+                    <svg class='mui-svg-icon -white'><use xlink:href='#svg-icon--star'></use></svg>
+                </div>
+                <p>Hire me!<br>I'm looking for a part-time job in Moscow, Russia<br><br><span itemprop='email'>sfi0zy@gmail.com</span></p>
+            </div>
+        </div>
+        <!-- /card (looking for job) -->
+
+        <!-- card (book) -->
+        <div class='mui-card -with-image _shadow-1 _separate-1'>
+            <div class='header'>
+                <img class='mui-image -js-lazy-load' data-src='/images/633fa4319ac8fa20cd053817707e24b4.jpg' src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' alt='Flamenco guitar method preview'>
+                <noscript>
+                    <img class='mui-image' src='/images/633fa4319ac8fa20cd053817707e24b4.jpg' alt='Flamenco guitar method preview'>
+                </noscript>
+            </div>
+            <div class='content -white-bg _text-center _smaller-1'>
+                <p>My flamenco guitar method is <a class='-green-3 -f-blue-4' href='https://editus.ru/more.php?itemid=213'>available for sale</a> on Editus.ru</p>
+            </div>
+        </div>
+        <!-- /card (book) -->
+
+        <!-- card (tags) -->
+        <div class='mui-card _shadow-1 _separate-1'>
+            <div class='content -white-bg _text-center _smaller-1'>
+                <div class='tags-cloud' role='navigation' aria-label='Tags cloud'>
+                    
+                    
+                        <span class='tag _no-break'>
+                            <a class='-f-blue-4' href='/tag/animejs/'
+                                    style='font-size: 92.0%' title='Search posts for tag animejs (8 posts total)'>
+                                    animejs (8)</a>
+                        </span>
+                    
+                        <span class='tag _no-break'>
+                            <a class='-f-blue-4' href='/tag/bash/'
+                                    style='font-size: 81.5%' title='Search posts for tag bash (1 posts total)'>
+                                    bash (1)</a>
+                        </span>
+                    
+                        <span class='tag _no-break'>
+                            <a class='-f-blue-4' href='/tag/books/'
+                                    style='font-size: 84.5%' title='Search posts for tag books (3 posts total)'>
+                                    books (3)</a>
+                        </span>
+                    
+                        <span class='tag _no-break'>
+                            <a class='-f-blue-4' href='/tag/chrome/'
+                                    style='font-size: 81.5%' title='Search posts for tag chrome (1 posts total)'>
+                                    chrome (1)</a>
+                        </span>
+                    
+                        <span class='tag _no-break'>
+                            <a class='-f-blue-4' href='/tag/codepen/'
+                                    style='font-size: 143.0%' title='Search posts for tag codepen (42 posts total)'>
+                                    codepen (42)</a>
+                        </span>
+                    
+                        <span class='tag _no-break'>
+                            <a class='-f-blue-4' href='/tag/css/'
+                                    style='font-size: 123.5%' title='Search posts for tag css (29 posts total)'>
+                                    css (29)</a>
+                        </span>
+                    
+                        <span class='tag _no-break'>
+                            <a class='-f-blue-4' href='/tag/cssquests/'
+                                    style='font-size: 83.0%' title='Search posts for tag cssquests (2 posts total)'>
+                                    cssquests (2)</a>
+                        </span>
+                    
+                        <span class='tag _no-break'>
+                            <a class='-f-blue-4' href='/tag/design/'
+                                    style='font-size: 86.0%' title='Search posts for tag design (4 posts total)'>
+                                    design (4)</a>
+                        </span>
+                    
+                        <span class='tag _no-break'>
+                            <a class='-f-blue-4' href='/tag/fractals/'
+                                    style='font-size: 83.0%' title='Search posts for tag fractals (2 posts total)'>
+                                    fractals (2)</a>
+                        </span>
+                    
+                        <span class='tag _no-break'>
+                            <a class='-f-blue-4' href='/tag/github/'
+                                    style='font-size: 96.5%' title='Search posts for tag github (11 posts total)'>
+                                    github (11)</a>
+                        </span>
+                    
+                        <span class='tag _no-break'>
+                            <a class='-f-blue-4' href='/tag/grunt/'
+                                    style='font-size: 83.0%' title='Search posts for tag grunt (2 posts total)'>
+                                    grunt (2)</a>
+                        </span>
+                    
+                        <span class='tag _no-break'>
+                            <a class='-f-blue-4' href='/tag/gulp/'
+                                    style='font-size: 90.5%' title='Search posts for tag gulp (7 posts total)'>
+                                    gulp (7)</a>
+                        </span>
+                    
+                        <span class='tag _no-break'>
+                            <a class='-f-blue-4' href='/tag/habrahabr/'
+                                    style='font-size: 96.5%' title='Search posts for tag habrahabr (11 posts total)'>
+                                    habrahabr (11)</a>
+                        </span>
+                    
+                        <span class='tag _no-break'>
+                            <a class='-f-blue-4' href='/tag/html/'
+                                    style='font-size: 119.0%' title='Search posts for tag html (26 posts total)'>
+                                    html (26)</a>
+                        </span>
+                    
+                        <span class='tag _no-break'>
+                            <a class='-f-blue-4' href='/tag/javascript/'
+                                    style='font-size: 134.0%' title='Search posts for tag javascript (36 posts total)'>
+                                    javascript (36)</a>
+                        </span>
+                    
+                        <span class='tag _no-break'>
+                            <a class='-f-blue-4' href='/tag/jquery/'
+                                    style='font-size: 83.0%' title='Search posts for tag jquery (2 posts total)'>
+                                    jquery (2)</a>
+                        </span>
+                    
+                        <span class='tag _no-break'>
+                            <a class='-f-blue-4' href='/tag/less/'
+                                    style='font-size: 96.5%' title='Search posts for tag less (11 posts total)'>
+                                    less (11)</a>
+                        </span>
+                    
+                        <span class='tag _no-break'>
+                            <a class='-f-blue-4' href='/tag/muilessium/'
+                                    style='font-size: 90.5%' title='Search posts for tag muilessium (7 posts total)'>
+                                    muilessium (7)</a>
+                        </span>
+                    
+                        <span class='tag _no-break'>
+                            <a class='-f-blue-4' href='/tag/music/'
+                                    style='font-size: 86.0%' title='Search posts for tag music (4 posts total)'>
+                                    music (4)</a>
+                        </span>
+                    
+                        <span class='tag _no-break'>
+                            <a class='-f-blue-4' href='/tag/other/'
+                                    style='font-size: 86.0%' title='Search posts for tag other (4 posts total)'>
+                                    other (4)</a>
+                        </span>
+                    
+                        <span class='tag _no-break'>
+                            <a class='-f-blue-4' href='/tag/postcss/'
+                                    style='font-size: 101.0%' title='Search posts for tag postcss (14 posts total)'>
+                                    postcss (14)</a>
+                        </span>
+                    
+                        <span class='tag _no-break'>
+                            <a class='-f-blue-4' href='/tag/publications/'
+                                    style='font-size: 101.0%' title='Search posts for tag publications (14 posts total)'>
+                                    publications (14)</a>
+                        </span>
+                    
+                        <span class='tag _no-break'>
+                            <a class='-f-blue-4' href='/tag/pug/'
+                                    style='font-size: 96.5%' title='Search posts for tag pug (11 posts total)'>
+                                    pug (11)</a>
+                        </span>
+                    
+                        <span class='tag _no-break'>
+                            <a class='-f-blue-4' href='/tag/security/'
+                                    style='font-size: 81.5%' title='Search posts for tag security (1 posts total)'>
+                                    security (1)</a>
+                        </span>
+                    
+                        <span class='tag _no-break'>
+                            <a class='-f-blue-4' href='/tag/svg/'
+                                    style='font-size: 104.0%' title='Search posts for tag svg (16 posts total)'>
+                                    svg (16)</a>
+                        </span>
+                    
+                        <span class='tag _no-break'>
+                            <a class='-f-blue-4' href='/tag/toster/'
+                                    style='font-size: 87.5%' title='Search posts for tag toster (5 posts total)'>
+                                    toster (5)</a>
+                        </span>
+                    
+                        <span class='tag _no-break'>
+                            <a class='-f-blue-4' href='/tag/ucavatar/'
+                                    style='font-size: 84.5%' title='Search posts for tag ucavatar (3 posts total)'>
+                                    ucavatar (3)</a>
+                        </span>
+                    
+                        <span class='tag _no-break'>
+                            <a class='-f-blue-4' href='/tag/ux/'
+                                    style='font-size: 125.0%' title='Search posts for tag ux (30 posts total)'>
+                                    ux (30)</a>
+                        </span>
+                    
+                        <span class='tag _no-break'>
+                            <a class='-f-blue-4' href='/tag/vim/'
+                                    style='font-size: 83.0%' title='Search posts for tag vim (2 posts total)'>
+                                    vim (2)</a>
+                        </span>
+                    
+                        <span class='tag _no-break'>
+                            <a class='-f-blue-4' href='/tag/vr/'
+                                    style='font-size: 81.5%' title='Search posts for tag vr (1 posts total)'>
+                                    vr (1)</a>
+                        </span>
+                    
+                        <span class='tag _no-break'>
+                            <a class='-f-blue-4' href='/tag/vue/'
+                                    style='font-size: 81.5%' title='Search posts for tag vue (1 posts total)'>
+                                    vue (1)</a>
+                        </span>
+                    
+                        <span class='tag _no-break'>
+                            <a class='-f-blue-4' href='/tag/webgl/'
+                                    style='font-size: 86.0%' title='Search posts for tag webgl (4 posts total)'>
+                                    webgl (4)</a>
+                        </span>
+                    
+                        <span class='tag _no-break'>
+                            <a class='-f-blue-4' href='/tag/webpack/'
+                                    style='font-size: 89.0%' title='Search posts for tag webpack (6 posts total)'>
+                                    webpack (6)</a>
+                        </span>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- /card (tags) -->
+
+        <!-- card (rss) -->
+        <div class='mui-card _shadow-1 _separate-1'>
+            <div class='content -white-bg _text-center _smaller-1'>
+                <a class='-f-blue-4' href='/feed.xml'>
+                    <svg class='mui-svg-icon'><use xlink:href='#svg-icon--rss'></use></svg>
+                    <span>RSS</span>
+                </a>
+            </div>
+        </div>
+        <!-- /card (rss) -->
+
+    </div>
+    <!-- /content-container -->
+</aside>
+<!-- /aside-column -->
+
+
+
+                    <!-- main-column -->
+                    <main class='mui-column -s12 -m8 -l9'>
+                        <!-- content-container -->
+                        <div class='mui-content-container'>
+                            <!-- post -->
+<article class='mui-post -white-bg _shadow-1 _separate-1' itemscope itemtype='https://schema.org/Blog'>
+    <!-- post-header -->
+    <header class='mui-post-header'>
+        <div class='title'>
+            <a class='-f-blue-4' href='/codepen/three-dots-spinner' aria-label='Post 3 dots spinner' itemprop='url'>
+                <h2 class='heading _bigger-1' itemprop='headline'>3 dots spinner</h2>
+            </a>
+        </div>
+        <div class='information -grey-4 _smaller-1'>
+            
+                <span class='post-badge' title='Hot on CodePen'>
+                    <span class='fa-codepen -grey-4'></span>
+                    <span class='fa-star -yellow-3'></span>
+                </span>
+            
+            
+            <span>Published on</span>
+            <span class='date' aria-label='Post publication date' itemprop='datePublished' datetime='2017-03-19'>March 19, 2017</span>
+        </div>
+    </header>
+    <!-- /post-header -->
+
+    <!-- post-content -->
+    <div class='mui-post-content' itemprop='text'>
+        <img class='mui-image -js-lazy-load' src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' data-src='/images/837781cca65246f18477729b4bf78e48.jpg' alt='3 dots spinner preview' itemprop='image'>
+        <noscript>
+            <img class='mui-image' src='/images/837781cca65246f18477729b4bf78e48.jpg' alt='3 dots spinner preview' itemprop='image'>
+        </noscript>
+
+        <p>This is a simple spinner with interesting effects. It can be used as full-page loading indicator.</p>
+
+<p data-height="427" data-theme-id="light" data-slug-hash="aJVGOd" data-default-tab="result" data-user="sfi0zy" data-embed-version="2" data-pen-title="3 Dots Spinner (CSS animations)" class="codepen">See the Pen <a href="https://codepen.io/sfi0zy/pen/aJVGOd/">3 Dots Spinner (CSS animations)</a> by Ivan Bogachev (<a href="http://codepen.io/sfi0zy">@sfi0zy</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+
+    </div>
+    <!-- /post-content -->
+
+    <!-- post-footer -->
+    <footer class='mui-post-footer'>
+        <!-- tags-list -->
+        <div class='mui-tags-list' aria-label='Tags list for this post'>
+            <div class='mui-tag-wrapper -icon'>
+                <svg class='mui-svg-icon'><use xlink:href='#svg-icon--tags'></use></svg>
+            </div>
+            
+                <div class='mui-tag-wrapper' itemprop='keywords'>
+                    <a class='mui-tag -f-blue-4' href='/tag/html/'
+                            title='Search by tag html'>html</a>
+                </div>
+            
+                <div class='mui-tag-wrapper' itemprop='keywords'>
+                    <a class='mui-tag -f-blue-4' href='/tag/svg/'
+                            title='Search by tag svg'>svg</a>
+                </div>
+            
+                <div class='mui-tag-wrapper' itemprop='keywords'>
+                    <a class='mui-tag -f-blue-4' href='/tag/css/'
+                            title='Search by tag css'>css</a>
+                </div>
+            
+                <div class='mui-tag-wrapper' itemprop='keywords'>
+                    <a class='mui-tag -f-blue-4' href='/tag/postcss/'
+                            title='Search by tag postcss'>postcss</a>
+                </div>
+            
+                <div class='mui-tag-wrapper' itemprop='keywords'>
+                    <a class='mui-tag -f-blue-4' href='/tag/ux/'
+                            title='Search by tag ux'>ux</a>
+                </div>
+            
+                <div class='mui-tag-wrapper' itemprop='keywords'>
+                    <a class='mui-tag -f-blue-4' href='/tag/codepen/'
+                            title='Search by tag codepen'>codepen</a>
+                </div>
+            
+        </div>
+        <!-- /tags-list -->
+
+        <!-- share links -->
+        <div class='share-links'>
+            <a class='mui-button -icon -white -green-3-bg -f-white -f-blue-4-bg' target='_blank' href='https://twitter.com/home?status=@sfi0zy - 3 dots spinner - https://sfi0zy.github.io/codepen/three-dots-spinner' title='Share this page on Twitter'><i class='fa fa-twitter'></i></a>
+            <a class='mui-button -icon -white -green-3-bg -f-white -f-blue-4-bg' target='_blank' href='http://vk.com/share.php?url=https://sfi0zy.github.io/codepen/three-dots-spinner&title=@sfi0zy - 3 dots spinner' title='Share this page on VK'><i class='fa fa-vk'></i></a>
+            <a class='mui-button -icon -white -green-3-bg -f-white -f-blue-4-bg' target='_blank' href='https://www.facebook.com/sharer/sharer.php?u=https://sfi0zy.github.io/codepen/three-dots-spinner' title='Share this page on Facebook'><i class='fa fa-facebook'></i></a>
+        </div>
+        <!-- /share links -->
+    </footer>
+    <!-- /post-footer -->
+</article>
+<!-- /post -->
+
+<!-- comments -->
+<div class='mui-card -grey-3-bg _shadow-1 _separate-1'>
+    <div class='header -grey-5-bg -white _text-left'>
+        <h2 class='_bigger-1 _padding-lr-1'>Comments (will be available soon)</h2>
+    </div>
+    <div class='content'>
+        <div class='_padding-lr-1'>
+            
+            
+            
+            <form method='POST' action='https://api.staticman.net/v2/entry/sfi0zy/sfi0zy.github.io/source/comments'>
+                <input name='fields[slug]' type='hidden' value='three-dots-spinner' />
+                <input name='options[redirect]' type='hidden' value='https://sfi0zy.github.io/codepen/three-dots-spinner' />
+                <div class='mui-input-wrapper _separate-1'>
+                    <label class='mui-input-label'>Your email</label>
+                    <div class='mui-input-hint'>
+                        <span>It will be hidden. We will generate unique avatar for you.</span>
+                        <span class='mui-input-indicator'>
+                            <span class='validicon'>✓</span>
+                            <span class='invalidicon'>✗</span>
+                        </span>
+                    </div>
+                    <div class='mui-input' data-regexp='^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$'>
+                        <input type='text' name='fields[email]' placeholder='Your email'>
+                    </div>
+                </div>
+                <div class='mui-input-wrapper _separate-1'>
+                    <label class='mui-input-label'>Message</label>
+                    <div class='mui-textarea'>   
+                        <textarea name='fields[message]' class='-grey-3-bg' placeholder='Type your message here...'></textarea>
+                    </div>
+                </div>
+                <div class='-grey-5 _smaller-1 _separate-1'>* Your comment will be shown here after the moderation.</div>
+                <input type='submit' class='mui-button _disabled -white -green-3-bg -f-blue-4-bg' value='Comment'>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- /comments -->
+
+
+<!-- similar-posts -->
+<div class='mui-card -white-bg _shadow-1 _separate-1'>
+    <div class='header -grey-5-bg -white _text-left'>
+        <h2 class='_bigger-1 _padding-lr-1'>Related posts</h2>
+    </div>
+    <div class='content'>
+        
+        
+        
+
+        
+
+        
+            
+            
+
+            
+
+            
+                
+                
+                    <div class='mui-row _padding-lr-1' itemscope itemtype='https://schema.org/Blog'>
+                        <div class='mui-column -s12 -m4 _separate-1'>
+                            <img class='mui-image -js-lazy-load' data-src='/images/c6318886573b85803796c7db04871871.jpg' src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' alt='Muilessium 1.0 - post preview' itemprop='image'>
+                            <noscript>
+                                <img class='mui-image' src='/images/c6318886573b85803796c7db04871871.jpg' alt='Muilessium 1.0 - post preview' itemprop='image'>
+                            </noscript>
+                        </div>
+                        <div class='mui-column -s12 -m8 _separate-1 _padding-lr-1'>
+                            <a class='-f-blue-4' href='/dev/muilessium-1.0' aria-label='Post Muilessium 1.0' itemprop='url'>
+                                <h3 class='_bigger-1' itemprop='headline'>Muilessium 1.0</h3>
+                            </a>
+                            <div class='mui-row -grey-4 _smaller-1'>
+                                
+                                
+                                <span aria-label='Post publication date' itemprop='datePublished' datetime='30 September 2018'>September 30, 2018</span>
+                            </div>
+                            <div class='mui-tags-list'>
+                                <div class='mui-tag-wrapper -icon _smaller-1'>
+                                    <svg class='mui-svg-icon'><use xlink:href='#svg-icon--tags'></use></svg>
+                                </div>
+                                
+                            <div class='mui-tag-wrapper _smaller-1'>
+                                <a class='mui-tag -f-blue-4' href='/tag/html' title='Search by tag html'>html</a>
+                            </div>
+                        
+                            <div class='mui-tag-wrapper _smaller-1'>
+                                <a class='mui-tag -f-blue-4' href='/tag/css' title='Search by tag css'>css</a>
+                            </div>
+                        
+                            </div>
+                        </div>
+                    </div>
+                
+            
+        
+            
+            
+
+            
+
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+                    <div class='mui-row _padding-lr-1' itemscope itemtype='https://schema.org/Blog'>
+                        <div class='mui-column -s12 -m4 _separate-1'>
+                            <img class='mui-image -js-lazy-load' data-src='/images/64c4ceaff49e40d7975df0cd0125696c.jpg' src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' alt='HTML template - post preview' itemprop='image'>
+                            <noscript>
+                                <img class='mui-image' src='/images/64c4ceaff49e40d7975df0cd0125696c.jpg' alt='HTML template - post preview' itemprop='image'>
+                            </noscript>
+                        </div>
+                        <div class='mui-column -s12 -m8 _separate-1 _padding-lr-1'>
+                            <a class='-f-blue-4' href='/dev/html-template-starter-kit' aria-label='Post HTML template' itemprop='url'>
+                                <h3 class='_bigger-1' itemprop='headline'>HTML template</h3>
+                            </a>
+                            <div class='mui-row -grey-4 _smaller-1'>
+                                
+                                
+                                <span aria-label='Post publication date' itemprop='datePublished' datetime='9 May 2017'>May 9, 2017</span>
+                            </div>
+                            <div class='mui-tags-list'>
+                                <div class='mui-tag-wrapper -icon _smaller-1'>
+                                    <svg class='mui-svg-icon'><use xlink:href='#svg-icon--tags'></use></svg>
+                                </div>
+                                
+                            <div class='mui-tag-wrapper _smaller-1'>
+                                <a class='mui-tag -f-blue-4' href='/tag/html' title='Search by tag html'>html</a>
+                            </div>
+                        
+                            <div class='mui-tag-wrapper _smaller-1'>
+                                <a class='mui-tag -f-blue-4' href='/tag/css' title='Search by tag css'>css</a>
+                            </div>
+                        
+                            <div class='mui-tag-wrapper _smaller-1'>
+                                <a class='mui-tag -f-blue-4' href='/tag/postcss' title='Search by tag postcss'>postcss</a>
+                            </div>
+                        
+                            </div>
+                        </div>
+                    </div>
+                
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+                    <div class='mui-row _padding-lr-1' itemscope itemtype='https://schema.org/Blog'>
+                        <div class='mui-column -s12 -m4 _separate-1'>
+                            <img class='mui-image -js-lazy-load' data-src='/images/c80e38f4f5704016aa53d2ce0dc2fdc2.jpg' src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' alt='Muilessium 0.1.1 released - post preview' itemprop='image'>
+                            <noscript>
+                                <img class='mui-image' src='/images/c80e38f4f5704016aa53d2ce0dc2fdc2.jpg' alt='Muilessium 0.1.1 released - post preview' itemprop='image'>
+                            </noscript>
+                        </div>
+                        <div class='mui-column -s12 -m8 _separate-1 _padding-lr-1'>
+                            <a class='-f-blue-4' href='/dev/muilessium-0.1.1-release' aria-label='Post Muilessium 0.1.1 released' itemprop='url'>
+                                <h3 class='_bigger-1' itemprop='headline'>Muilessium 0.1.1 released</h3>
+                            </a>
+                            <div class='mui-row -grey-4 _smaller-1'>
+                                
+                                
+                                <span aria-label='Post publication date' itemprop='datePublished' datetime='6 January 2017'>January 6, 2017</span>
+                            </div>
+                            <div class='mui-tags-list'>
+                                <div class='mui-tag-wrapper -icon _smaller-1'>
+                                    <svg class='mui-svg-icon'><use xlink:href='#svg-icon--tags'></use></svg>
+                                </div>
+                                
+                            <div class='mui-tag-wrapper _smaller-1'>
+                                <a class='mui-tag -f-blue-4' href='/tag/html' title='Search by tag html'>html</a>
+                            </div>
+                        
+                            <div class='mui-tag-wrapper _smaller-1'>
+                                <a class='mui-tag -f-blue-4' href='/tag/css' title='Search by tag css'>css</a>
+                            </div>
+                        
+                            </div>
+                        </div>
+                    </div>
+                
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+        
+            
+            
+
+            
+
+            
+        
+            
+            
+
+            
+
+            
+        
+            
+            
+
+            
+
+            
+        
+            
+            
+
+            
+
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+        
+            
+            
+
+            
+
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+        
+            
+            
+
+            
+
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+        
+            
+            
+
+            
+
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+            
+            
+
+            
+
+            
+                
+                
+            
+        
+
+
+        
+    </div>
+</div>
+<!-- /similar-posts -->
+
+
+<!-- recommended projects -->
+<div class='mui-card -white-bg _shadow-1 _separate-1'>
+    <div class='header -grey-5-bg -white _text-left'>
+        <h2 class='_bigger-1 _padding-lr-1'>Projects</h2>
+    </div>
+    <div class='content'>
+        <div class='mui-row _padding-lr-1' itemscope itemtype='https://schema.org/CreativeWork'>
+            <div class='mui-column -s12 -m4 _separate-1'>
+                <img class='mui-image -js-lazy-load' data-src='/images/c6318886573b85803796c7db04871871.jpg' src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' alt='Muilessium preview' itemprop='thumbnailUrl'>
+                <noscript>
+                    <img class='mui-image' src='/images/c6318886573b85803796c7db04871871.jpg' alt='Muilessium preview' itemprop='thumbnailUrl'>
+                </noscript>
+            </div>
+            <div class='mui-column -s12 -m8 _separate-1 _padding-lr-1'>
+                <a class='-f-blue-4' href='https://github.com/sfi0zy/muilessium' itemprop='url'>
+                    <h3 class='_bigger-1' itemprop='name'>Muilessium</h3>
+                </a>
+                <div class='mui-row -grey-4 _smaller-1'>
+                    <div class='-grey-5'>
+                        <svg class='mui-svg-icon'><use xlink:href='#svg-icon--star--grey'></use></svg>
+                        <span>9</span>&nbsp;
+                        <svg class='mui-svg-icon'><use xlink:href='#svg-icon--fork--grey'></use></svg>
+                        <span>2</span>&nbsp;
+                        <svg class='mui-svg-icon'><use xlink:href='#svg-icon--archive--grey'></use></svg>
+                        <span>10k+</span>
+                    </div>
+                    <p itemprop='description'>Simple UI framework. RSCSS, REM-based sizes, fluid typography and other nice ideas. This website is powered by it.</p>
+                </div>
+            </div>
+        </div>
+        <div class='mui-row _padding-lr-1' itemscope itemtype='https://schema.org/CreativeWork'>
+            <div class='mui-column -s12 -m4 _separate-1'>
+                <img class='mui-image -js-lazy-load' data-src='/images/4624e920caf44cd5aa02302ba608efef.jpg' src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' alt='Ucavatar preview' itemprop='thumbnailUrl'>
+                <noscript>
+                    <img class='mui-image' src='/images/4624e920caf44cd5aa02302ba608efef.jpg' alt='Ucavatar preview' itemprop='thumbnailUrl'>
+                </noscript>
+            </div>
+            <div class='mui-column -s12 -m8 _separate-1 _padding-lr-1'>
+                <a class='-f-blue-4' href='https://github.com/sfi0zy/ucavatar' itemprop='url'>
+                    <h3 class='_bigger-1' itemprop='name'>Ucavatar</h3>
+                </a>
+                <div class='mui-row -grey-4 _smaller-1'>
+                    <div class='-grey-5'>
+                        <svg class='mui-svg-icon'><use xlink:href='#svg-icon--star--grey'></use></svg>
+                        <span>13</span>&nbsp;
+                        <svg class='mui-svg-icon'><use xlink:href='#svg-icon--archive--grey'></use></svg>
+                        <span>500+</span>
+                    </div>
+                    <p itemprop='description'>Unique avatars for your users. No dependencies, VanillaJS, 1.6KB gzipped.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /recommended projects -->
+
+<!-- useful things -->
+<div class='mui-card -white-bg _shadow-1 _separate-1'>
+    <div class='header -grey-5-bg -white _text-left'>
+        <h2 class='_bigger-1 _padding-lr-1'>Useful things</h2>
+    </div>
+    <div class='content'>
+        <div class='mui-row _padding-lr-1' itemscope itemtype='https://schema.org/CreativeWork'>
+            <div class='mui-column -s12 -m4 _separate-1'>
+                <img class='mui-image -js-lazy-load' data-src='/images/ac78ddbe66bec1051f189d2a3e3a62b5.jpg' src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' alt='Atlantic-dark scheme preview' itemprop='thumbnailUrl'>
+                <noscript>
+                    <img class='mui-image' src='/images/ac78ddbe66bec1051f189d2a3e3a62b5.jpg' alt='Atlantic-dark scheme preview' itemprop='thumbnailUrl'>
+                </noscript>
+            </div>
+            <div class='mui-column -s12 -m8 _separate-1 _padding-lr-1'>
+                <a class='-f-blue-4' href='https://github.com/sfi0zy/atlantic-dark' itemprop='url'>
+                    <h3 class='_bigger-1' itemprop='name'>Atlantic-dark</h3>
+                </a>
+                <div class='mui-row -grey-4 _smaller-1'>
+                    <div class='-grey-5'>
+                        <svg class='mui-svg-icon'><use xlink:href='#svg-icon--star--grey'></use></svg>
+                        <span>3</span>&nbsp;
+                        <svg class='mui-svg-icon'><use xlink:href='#svg-icon--fork--grey'></use></svg>
+                        <span>2</span>&nbsp;
+                    </div>
+                    <p itemprop='description'>Dark color scheme for Vim. Mostly blue and green colors.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class='mui-row _padding-lr-1' itemscope itemtype='https://schema.org/CreativeWork'>
+            <div class='mui-column -s12 -m4 _separate-1'>
+                <img class='mui-image -js-lazy-load' data-src='/images/64c4ceaff49e40d7975df0cd0125696c.jpg' src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' alt='html-template thumb' itemprop='thumbnailUrl'>
+                <noscript>
+                    <img class='mui-image' src='/images/64c4ceaff49e40d7975df0cd0125696c.jpg' alt='html-template thumb' itemprop='thumbnailUrl'>
+                </noscript>
+            </div>
+            <div class='mui-column -s12 -m8 _separate-1 _padding-lr-1'>
+                <a class='-f-blue-4' href='https://github.com/sfi0zy/html-template' itemprop='url'>
+                    <h3 class='_bigger-1' itemprop='name'>HTML template</h3>
+                </a>
+                <div class='mui-row -grey-4 _smaller-1'>
+                    <div class='-grey-5'>
+                        <svg class='mui-svg-icon'><use xlink:href='#svg-icon--star--grey'></use></svg>
+                        <span>2</span>&nbsp;
+                    </div>
+                    <p itemprop='description'>Minimal HTML template (Pug, LESS, PostCSS, Babel, Gulp, Webpack, BrowserSync).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /useful things -->
+
+
+
+
+                        </div>
+                        <!-- /content-container -->
+                    </main>
+                    <!-- /main-column -->
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /content-container -->
+        </div>
+        <!-- page-container -->
+        <!-- page-footer -->
+<footer class='mui-page-footer _text-center _line-3r -white -grey-5-bg _shadow-1'>
+    <div>Copyright &copy; Ivan Bogachev 2016-2018</div>
+</footer>
+<!-- /page-footer -->
+
+
+<link rel='stylesheet' href='/css/muilessium.min.css?v=0.2.34'>
+<link rel='stylesheet' href='/css/main.css?v=201809221007'>
+
+
+<!-- svg-sprite -->
+<div class='mui-svg-sprite'>
+    <svg version='1.1' xmlns='http://www.w3.org/2000/svg'>
+        <symbol viewBox='0 0 512 512' id='svg-icon--check'><path d='M186.301 339.893L96 249.461l-32 30.507L186.301 402 448 140.506 416 110z'></path></symbol>
+        <symbol viewBox='0 0 512 512' id='svg-icon--close'><path d='M405 136.798L375.202 107 256 226.202 136.798 107 107 136.798 226.202 256 107 375.202 136.798 405 256 285.798 375.202 405 405 375.202 285.798 256z'></path></symbol>
+        <symbol viewBox='0 0 512 512' id='svg-icon--arrow-down'><path d='M277.375 85v259.704l119.702-119.702L427 256 256 427 85 256l29.924-29.922 119.701 118.626V85h42.75z'></path></symbol>
+        <symbol viewBox='0 0 512 512' id='svg-icon--arrow-right'><path d='M85 277.375h259.704L225.002 397.077 256 427l171-171L256 85l-29.922 29.924 118.626 119.701H85v42.75z'></path></symbol>
+        <symbol viewBox='0 0 512 512' id='svg-icon--arrow-left'><path d='M427 234.625H167.296l119.702-119.702L256 85 85 256l171 171 29.922-29.924-118.626-119.701H427v-42.75z'></path></symbol>
+        <symbol viewBox='0 0 512 512' id='svg-icon--arrow-up'><path d='M277.375 427V167.296l119.702 119.702L427 256 256 85 85 256l29.924 29.922 119.701-118.626V427h42.75z'></path></symbol>
+        <symbol viewBox='0 0 512 512' id='svg-icon--star'><path d='M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z'></path></symbol>
+        <symbol viewBox='0 0 512 512' id='svg-icon--star--grey'><path fill='#383838' d='M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z'></path></symbol>
+        <symbol viewBox='0 0 512 512' id='svg-icon--hamburger'><path d='M64 384h384v-42.666H64V384zm0-106.666h384v-42.667H64v42.667zM64 128v42.665h384V128H64z'></path></symbol>
+        <symbol viewBox='0 0 512 512' id='svg-icon--tags'><path d='M472 239.2s-.1 0 0 0L282.1 48.1l-1.4-1.4h-.5c-7.5-7.2-16.1-10.9-27.1-11.1l-89.9-3.3-3.9-.1c-10.1.1-20 4.1-27.7 11.8l-27.1 27.2c7.4-6.6 16.6-10 26-10.1l3.8.1 89.8 3.3c11 .2 19.7 3.9 27.2 11.1h.5l1.4 1.4L443 268.1c10 10.8 10.7 28.2 0 38.9l29-28.9c10.6-10.7 10-28.1 0-38.9z'></path><path d='M428 282.5h.3L238.6 91.4l-1.3-1.4h-.3c-7.5-7.2-15.9-10.9-26.9-11.1L120 75.6l-4-.1c-9.2.1-18.2 3.4-25.6 9.8-.3.3-.7.6-1 .9l-1.2 1.2-44.3 44.5C35.8 140 32 150.8 32 161.4v.1l.1 3.8 5.9 87.9v1.9c1 7.9 4.2 15.6 9.6 22l5.1 4.9L239 470.4l2.8 2.8c10.7 9.4 27.1 9 37.3-1.3l13.1-13.2c.5-.4.9-.8 1.4-1.3l26.9-27c-.2.1-.3.2-.5.4l108.3-109.3c10.6-10.7 10.7-28.2-.3-39zm-317.4-143c6.6-4 14.3-6.3 22.6-6.3 23.9 0 43.4 19.4 43.4 43.4 0 8.3-2.3 16-6.3 22.6-7.6 12.5-21.3 20.8-37 20.8-23.9 0-43.4-19.4-43.4-43.4-.1-15.8 8.2-29.5 20.7-37.1z'></path></symbol>
+    <symbol viewBox='0 0 512 512' id='svg-icon--archive--grey'><path fill='#383838' d='M256 307.7L384 192h-80V96h-96.4v96H128z'></path><path d='M465.4 297.2l-71.4-55h-42l62 61.8h-50.6c-2.3 0-4.3 1.2-5.4 2.9l-18.4 45.5H172.1l-18.4-45.5c-1-1.8-3.1-2.9-5.4-2.9H97.8l62.2-61.8h-42.2l-71.4 55c-10.6 6.2-15.8 19-14.1 31.6l8.7 66.9c2.3 13.1 9.7 20.3 28.1 20.3h373.8c19.1 0 25.8-7.6 28.1-20.3l8.7-66.9c1.7-12.9-3.7-25.4-14.3-31.6z'></path></symbol>
+    <symbol viewBox='0 0 512 512' id='svg-icon--notes'><path d='M416 319.9V78l-224 34.6v237.2c-9 0-20.9.4-43.5 1.3-42.6 1.6-52.5 21.8-52.5 41.3 0 24.9 13.5 43.5 62.6 41.4 52.8-2.3 50.3-49 50.3-82.5V189.8l191-32v160.6c-9 0-19.9.4-42.6 1.3-42.6 1.6-52.5 21.8-52.5 41.3 0 24.9 13 43.5 62.2 41.4 53-2.3 49-49 49-82.5z'></path></symbol>
+    <symbol viewBox='0 0 512 512' id='svg-icon--fork--grey'><path fill='#383838' d='M416 80h-48V32h-64v48h-48v64h48v48h64v-48h48z'></path><path fill='#383838' d='M304 240c0 38.6-4.5 42.3-14.4 50.3-7.4 6-22.2 7.1-39.4 8.3-9.5.7-20.4 1.5-31.4 3.3-9.4 1.5-18.4 4.7-26.8 8.8V151.4c19.1-11.1 32-31.7 32-55.4 0-35.3-28.7-64-64-64S96 60.7 96 96c0 23.7 12.9 44.3 32 55.4v209.2c-19.1 11.1-32 31.7-32 55.4 0 35.3 28.7 64 64 64s64-28.7 64-64c0-15.7-5.7-30.1-15-41.2 6.7-4.8 13.9-8.7 20.2-9.7 8.1-1.3 16.6-1.9 25.6-2.6 24.4-1.7 52.1-3.7 75.2-22.5 30.9-25.1 37.5-52.1 38-94.9V240h-64zM160 64c17.6 0 32 14.4 32 32s-14.4 32-32 32-32-14.4-32-32 14.4-32 32-32zm0 384c-17.6 0-32-14.4-32-32s14.4-32 32-32 32 14.4 32 32-14.4 32-32 32z'></path></symbol>
+    <symbol viewBox='0 0 512 512' id='svg-icon--rss'><path d='M119.9 336.1c-30.8 0-55.9 25.1-55.9 55.8 0 30.8 25.1 55.6 55.9 55.6 30.9 0 55.9-24.9 55.9-55.6 0-30.7-25-55.8-55.9-55.8z'></path><path d='M64 192v79.9c48 0 94.1 14.2 128 48.1 33.9 33.9 48 79.9 48 128h80c0-139.9-116-256-256-256z'></path><path d='M64 64v79.9c171 0 303.9 133 303.9 304.1H448C448 236.3 276 64 64 64z'></path></symbol>
+    <symbol viewBox='0 0 512 512' id='svg-icon--plane'><path d='M32 272l128 48 16 160 80-112 112 112L480 32 32 272zm318.7 145.4L256 320l128-176-192 153.8-82.6-31 322-172.5-80.7 323.1z'></path></symbol>
+    </svg>
+</div>
+<!-- /svg-sprite -->
+
+
+
+<script src='/js/muilessium.min.js?v=0.2.34'></script>
+<script src='/js/ucavatar.js?v1.0.4'></script>
+<script src='/js/main.js?v=20180905'></script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-53893511-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+    </body>
+</html>
