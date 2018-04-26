@@ -1,0 +1,180 @@
+---
+layout: default
+---
+
+{% if page.paginator %}
+    {% assign paginator = page.paginator %}
+{% endif %}
+
+
+{% if page.url == "/" %}
+    <!-- recommended tags -->
+    <div class='mui-card -white-bg _shadow-1 _separate-1'>
+        <div class='content'>
+            <a class='mui-button -ghost -f-white -f-blue-4-bg' href='/tag/ux/'>UX</a>
+            <a class='mui-button -ghost -f-white -f-blue-4-bg' href='/tag/books/'>Books</a>
+            <a class='mui-button -ghost -f-white -f-blue-4-bg' href='/tag/habrahabr/'>Habr</a>
+            <!--<a class='mui-button -ghost -f-white -f-blue-4-bg' href='/tag/promo/'>Promo</a>-->
+        </div>
+    </div>
+    <!-- /recommended tags -->
+
+    <!-- pinned post -->
+    <div class='mui-card -white-bg _shadow-1 _separate-1'>
+        <div class='content'>
+            <div class='mui-row _padding-lr-1' itemscope itemtype='https://schema.org/Blog'>
+                <div class='mui-column -s12 -m4 _separate-1'>
+                    <img class='mui-image -js-lazy-load' data-src='/images/2980530a86179302a582ca7e7751cefa.jpg' src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' alt='Pieces for piano and violin - post preview' itemprop='image'>
+                    <noscript>
+                        <img class='mui-image' src='/images/2980530a86179302a582ca7e7751cefa.jpg' alt='Pieces for piano and violin - post preview' itemprop='image'>
+                    </noscript>
+                </div>
+                <div class='mui-column -s12 -m8 _separate-1 _padding-lr-1'>
+                    <a class='-f-blue-4' href='/publications/pieces-for-piano-and-violin' aria-label='Post pieces for piano and violin' itemprop='url'>
+                        <h3 class='_bigger-1' itemprop='headline'>Pieces for piano and violin</h3>
+                    </a>
+                    <div class='mui-row -grey-4 _smaller-1'>
+                        <span class='post-badge -separated' title='Publication'>
+                            <span class='fa-book -brown-3'></span>
+                        </span>
+                        <span class='post-badge -separated' title='Music'>
+                            <svg class='mui-svg-icon'><use xlink:href='#svg-icon--notes'></use></svg>
+                        </span>&nbsp;
+                        <span aria-label='Post publication date' itemprop='datePublished' datetime='2018-08-02'> August 2, 2018</span>
+                    </div>
+                    <p>My new book has been published. MP3 and PDF previews are <a class='-green-3 -f-blue-4' href='/publications/pieces-for-piano-and-violin'>available here</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /pinned post -->
+{% elsif page.url == "/tag/publications/index" %}
+    <!-- recommended tags -->
+    <div class='mui-card -white-bg _shadow-1 _separate-1'>
+        <div class='content'>
+            <a class='mui-button -ghost -f-white -f-blue-4-bg' href='/tag/books/'>Books</a>
+            <a class='mui-button -ghost -f-white -f-blue-4-bg' href='/tag/habrahabr/'>Habr</a>
+        </div>
+    </div>
+    <!-- /recommended tags -->
+{% endif %}
+
+
+{% for post in paginator.posts %}
+    <!-- post -->
+    <article class='mui-post -white-bg _shadow-1 _separate-1' itemscope itemtype='https://schema.org/Blog'>
+        <!-- post-header -->
+        <header class='mui-post-header'>
+            <div class='title'>
+                <a class='-f-blue-4' href='{{ post.url }}' aria-label='Post {{ post.title }}' itemprop='url'>
+                    <h2 class='heading _bigger-1' itemprop='headline'>{{ post.title }}</h2>
+                </a>
+            </div>
+            <div class='information -grey-4 _smaller-1'>
+                {% if post.icon == "hotoncodepen" %}
+                    <span class='post-badge' title='Hot on CodePen'>
+                        <span class='fa-codepen -grey-4'></span>
+                        <span class='fa-star -yellow-3'></span>
+                    </span>
+                {% elsif post.icon == "publication" %}
+                    <span class='post-badge' title='Publication'>
+                        <span class='fa-book -brown-3'></span>
+                    </span>
+                    {% if post.tags contains 'habrahabr' %}
+                        {% if post.rating > 0 %}
+                            <span class='post-badge -green-3' title='Rating on Habr.com'>+{{ post.rating }}&nbsp;</span>
+                        {% endif %}
+                    {% endif %}
+                {% endif %}
+                {% if post.tags contains 'music' %}
+                    <span class='post-badge' title='Music'>
+                        <svg class='mui-svg-icon'><use xlink:href='#svg-icon--notes'></use></svg>
+                    </span>&nbsp;
+                {% endif %}
+                <span>Published on</span>
+                <span class='date' aria-label='Post publication date' itemprop='datePublished' datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date: '%B %-d, %Y' }}</span>
+            </div>
+        </header>
+        <!-- /post-header -->
+
+        <!-- post-content -->
+        <div class='mui-post-content'>
+            <img class='mui-image -js-lazy-load' src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'  data-src='{{ post.thumb }}' alt='{{ post.title }} - post preview' itemprop='image'>
+            <noscript>
+                <img class='mui-image' src='{{ post.thumb }}' alt='{{ post.title }} - post preview' itemprop='image'>
+            </noscript>
+            <div class='mui-p _separate-1'>{{ post.excerpt }}</div>
+            <a class='mui-button -ghost -read-more -f-blue-4-bg -f-white' href='{{ post.url }}'>Read more <svg class='mui-svg-icon'><use xlink:href='#svg-icon--arrow-right'></use></svg></a>
+        </div>
+        <!-- /post-content -->
+
+        <!-- post-footer -->
+        <footer class='mui-post-footer'>
+            <!-- tags-list -->
+            <div class='mui-tags-list' aria-label='Tags list for this post'>
+                <div class='mui-tag-wrapper -icon'>
+                    <svg class='mui-svg-icon'><use xlink:href='#svg-icon--tags'></use></svg>
+                </div>
+                {% for tag in post.tags %}
+                    <div class='mui-tag-wrapper' itemprop='keywords'>
+                        <a class='mui-tag -f-blue-4' href='/{{ site.tags_dir }}/{{ tag }}/'
+                                title='Search by tag {{ tag }}'>{{ tag }}</a>
+                    </div>
+                {% endfor %}
+            </div>
+            <!-- tags-list -->
+        </footer>
+        <!-- post-footer -->
+    </article>
+    <!-- post -->
+{% endfor %}
+
+
+
+
+{% if paginator.total_pages > 1 %}
+    {% if page.search %}
+        <!-- pagination -->
+        <div class='mui-pagination _separate-2' aria-label='Pagination'>
+            {% if paginator.previous_page %}
+                <div class='page'>
+                    {% if paginator.page == 2 %}
+                        <a class='link -white -green-3-bg -f-white -f-blue-4-bg' href='/{{ site.tags_dir }}/{{ page.search_tag }}'><svg class='mui-svg-icon -white'><use xlink:href='#svg-icon--arrow-left'></use></svg> Newer posts</a>
+                    {% else %}
+                        <a class='link -white -green-3-bg -f-white -f-blue-4-bg' href='/{{ site.tags_dir }}/{{ page.search_tag }}{{ paginator.previous_page_path }}'><svg class='mui-svg-icon -white'><use xlink:href='#svg-icon--arrow-left'></use></svg> Newer posts</a>
+                    {% endif %}
+                </div>
+            {% endif %}    
+
+            {% if paginator.next_page %}
+                <div class='page'>
+                    <a class='link -white -green-3-bg -f-white -f-blue-4-bg' href='/{{ site.tags_dir }}/{{ page.search_tag }}{{ paginator.next_page_path }}'>Older posts <svg class='mui-svg-icon -white'><use xlink:href='#svg-icon--arrow-right'></use></svg></a>
+                </div>
+            {% endif %}
+        </div>
+        <!-- /pagination -->
+    {% else %}
+        <!-- pagination -->
+        <div class='mui-pagination _separate-2' aria-label='Pagination'>
+            {% if paginator.previous_page %}
+                <div class='page'>
+                    {% if paginator.page == 2 %}
+                        <a class='link -white -green-3-bg -f-white -f-blue-4-bg' href='/'><svg class='mui-svg-icon -white'><use xlink:href='#svg-icon--arrow-left'></use></svg> Newer posts</a>
+                    {% else %}
+                        <a class='link -white -green-3-bg -f-white -f-blue-4-bg' href='{{ paginator.previous_page_path }}'><svg class='mui-svg-icon -white'><use xlink:href='#svg-icon--arrow-left'></use></svg> Newer posts</a>
+                    {% endif %}
+                </div>
+            {% endif %}    
+            {% if paginator.next_page %}
+                <div class='page'>
+                    <a class='link -white -green-3-bg -f-white -f-blue-4-bg' href='{{ paginator.next_page_path }}'>Older posts <svg class='mui-svg-icon -white'><use xlink:href='#svg-icon--arrow-right'></use></svg></a>
+                </div>
+            {% endif %}
+        </div>
+        <!-- /pagination -->
+    {% endif %}
+{% endif %}
+
+
+{% include projects.html %}
+
