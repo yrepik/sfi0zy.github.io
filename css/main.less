@@ -42,48 +42,32 @@
 .fa-codepen:before     { content: '\f1cb'; }
 
 
-
 // =============================================================================
-// GLOBAL STYLES
+// GLOBAL STYLES & UTILS
 // =============================================================================
-
-a {
-    text-decoration: none;
-
-    transition: all 210ms cubic-bezier(.96,.09,.55,.86) !important;
-
-    &:hover,
-    &:focus {
-        color: #1565c0 !important;
-    }
-}
-
 
 mark {
-    background: #fff59d;
+    background: #f48fb1;
 }
 
-
-
-// =============================================================================
-// UTILS
-// =============================================================================
 
 ._padding-lr-1 {
     padding-left: 1rem;
     padding-right: 1rem;
 }
 
-._padding-lr-2 {
-    padding-left: 2rem;
-    padding-right: 2rem;
+
+
+// =============================================================================
+// MUILESSIUM
+// =============================================================================
+
+.mui-header-logo {
+    // Use !important here to generate the correct critical CSS
+    // and apply this padding without future changes from Muilessium
+    padding-left: .5rem !important;
 }
 
-
-
-// =============================================================================
-// MUILESSIUM COMPONENTS
-// =============================================================================
 
 .mui-content-container {
     width: 90%;
@@ -119,78 +103,6 @@ mark {
     }
 }
 
-
-.mui-page-header {
-    background: #212121;
-    max-height: 4rem;
-}
-
-
-.mui-header-logo {
-    padding-left: .5rem;
-}
-
-
-.mui-header-navigation.-mobile-version {
-    > .linkslist {
-        background: #212121;
-    }
-
-    > .linkslist > .item {
-        border-top: none !important;
-    }
-}
-
-
-.mui-button {
-    &.-contact {
-        display: inline-block;
-        line-height: 2rem;
-        font-size: 1em;
-        margin-top: .3rem;
-    }
-
-    &.-read-more {
-        > svg > use {
-            transition: fill 210ms cubic-bezier(.96,.09,.55,.86);
-        }
-
-        &:hover,
-        &:focus {
-            > svg > use {
-                fill: #ffffff;
-            }
-        }
-    }
-}
-
-
-.mui-progress-bar {
-    margin: 0 auto;
-}
-
-
-.mui-pagination {
-    > .page > .link {
-        height: 2rem;
-        border-radius: .2rem;
-    }
-}
-
-
-.mui-post {
-    border-radius: .2rem;
-}
-
-
-.mui-post-header {
-    > .title {
-        font-size: 1.6rem;
-        padding-right: 4rem;
-    }
-}
-
-
 .mui-post-content {
     a {
         border-bottom: 1px dashed #424242;
@@ -201,36 +113,6 @@ mark {
         margin-bottom: 1rem;
     }
 }
-
-
-.mui-post-footer {
-    > .mui-tags-list {
-        display: block;
-        width: 100%;
-        max-width: 100%;
-        float: left;
-    }
-
-    > .share-links {
-        float: right;
-    }
-
-    > .mui-button.-read-more {
-        float: left;
-        margin-top: 1rem;
-    }
-
-    > .share-links {
-        float: left;
-        margin-top: 1rem;
-    }
-}
-
-
-.mui-input {
-    border-color: #424242;
-}
-
 
 
 // =============================================================================
@@ -253,7 +135,6 @@ mark {
 
 
 .contacts-icons {
-    border-radius: .2rem;
     padding: .5rem .2rem;
 }
 

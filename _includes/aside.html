@@ -20,8 +20,8 @@
                         </div>
                         <div class='contacts-icons _separate-1'>
                             <a class='mui-button -icon -contact -blue-2-bg -white -f-white -f-blue-4-bg' href='https://habr.com/users/sfi0zy/' title='My profile on Habr.com'><b role='presentation'>h</b></a>
-                            <a class='mui-button -icon -contact -grey-5-bg -white -f-white -f-blue-4-bg' href='https://github.com/sfi0zy' title='My GitHub profile'><i class='fa fa-github' role='presentation'></i></a>
-                            <a class='mui-button -icon -contact -blue-3-bg -f-blue-4-bg' href='https://t.me/sfi0zy' title='My Telegram'><svg class='mui-svg-icon -white'><use xlink:href='#svg-icon--plane'></use></svg></a>
+                            <a class='mui-button -icon -contact -grey-5-bg -white -f-white -f-blue-4-bg' href='https://github.com/sfi0zy' title='My GitHub'><i class='fa fa-github' role='presentation'></i></a>
+                            <a class='mui-button -icon -contact -blue-3-bg -f-blue-4-bg' href='https://t.me/sfi0zy' title='My Telegram'><svg class='mui-svg-icon -white'><use xlink:href='#mui-svg-icon--plane'></use></svg></a>
                         </div>
                     </div>
                 </div>
@@ -30,10 +30,12 @@
         <!-- /card (photo & info) -->
 
         <!-- card (looking for job) -->
-        <div class='mui-card -looking-for-job -white -green-3-bg _shadow-1 _separate-1'>
+        <div class='mui-card -white -green-3-bg _shadow-1 _separate-1'>
             <div class='content -white _text-center _smaller-1'>
                 <div class='_bigger-3'>
-                    <svg class='mui-svg-icon -white'><use xlink:href='#svg-icon--star'></use></svg>
+                    <svg class='mui-svg-icon -white'>
+                        <use xlink:href='#mui-svg-icon--star'></use>
+                    </svg>
                 </div>
                 <p>Hire me!<br>I'm looking for a part-time job in Moscow, Russia<br><br><span itemprop='email'>sfi0zy@gmail.com</span></p>
             </div>
@@ -41,14 +43,14 @@
         <!-- /card (looking for job) -->
 
         <!-- card (book) -->
-        <div class='mui-card -with-image _shadow-1 _separate-1'>
+        <div class='mui-card -white-bg -with-image _shadow-1 _separate-1'>
             <div class='header'>
                 <img class='mui-image -js-lazy-load' data-src='/images/633fa4319ac8fa20cd053817707e24b4.jpg' src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' alt='Flamenco guitar method preview'>
                 <noscript>
                     <img class='mui-image' src='/images/633fa4319ac8fa20cd053817707e24b4.jpg' alt='Flamenco guitar method preview'>
                 </noscript>
             </div>
-            <div class='content -white-bg _text-center _smaller-1'>
+            <div class='content _text-center _smaller-1'>
                 <p>My flamenco guitar method is <a class='-green-3 -f-blue-4' href='https://editus.ru/more.php?itemid=213'>available for sale</a> on Editus.ru</p>
             </div>
         </div>
@@ -61,7 +63,7 @@
                     {% assign tags = site.tags | sort %}
                     {% for tag in tags %}
                         <span class='tag _no-break'>
-                            <a class='-f-blue-4' href='/{{ site.tags_dir }}/{{ tag | first | slugify }}/'
+                            <a href='/{{ site.tags_dir }}/{{ tag | first | slugify }}/'
                                     style='font-size: {{ tag | last | size  |  times: 1.5 | plus: 80  }}%' title='Search posts for tag {{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }} posts total)'>
                                     {{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})</a>
                         </span>
@@ -74,8 +76,10 @@
         <!-- card (rss) -->
         <div class='mui-card _shadow-1 _separate-1'>
             <div class='content -white-bg _text-center _smaller-1'>
-                <a class='-f-blue-4' href='/feed.xml'>
-                    <svg class='mui-svg-icon'><use xlink:href='#svg-icon--rss'></use></svg>
+                <a href='/feed.xml'>
+                    <svg class='mui-svg-icon'>
+                        <use xlink:href='#mui-svg-icon--rss'></use>
+                    </svg>
                     <span>RSS</span>
                 </a>
             </div>

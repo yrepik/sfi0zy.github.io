@@ -7,8 +7,8 @@ layout: default
     <!-- post-header -->
     <header class='mui-post-header'>
         <div class='title'>
-            <a class='-f-blue-4' href='{{ page.url }}' aria-label='Post {{ page.title }}' itemprop='url'>
-                <h2 class='heading _bigger-1' itemprop='headline'>{{ page.title }}</h2>
+            <a class='-grey-5 -f-blue-4' href='{{ page.url }}' aria-label='Post {{ page.title }}' itemprop='url'>
+                <h2 class='heading _bigger-3' itemprop='headline'>{{ page.title }}</h2>
             </a>
         </div>
         <div class='information -grey-4 _smaller-1'>
@@ -29,7 +29,9 @@ layout: default
             {% endif %}
             {% if page.tags contains 'music' %}
                 <span class='post-badge' title='Music'>
-                    <svg class='mui-svg-icon'><use xlink:href='#svg-icon--notes'></use></svg>
+                    <svg class='mui-svg-icon'>
+                        <use xlink:href='#mui-svg-icon--notes'></use>
+                    </svg>
                 </span>&nbsp;
             {% endif %}
             <span>Published on</span>
@@ -40,9 +42,9 @@ layout: default
 
     <!-- post-content -->
     <div class='mui-post-content' itemprop='text'>
-        <img class='mui-image -js-lazy-load' src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' data-src='{{ page.thumb }}' alt='{{ page.title }} preview' itemprop='image'>
+        <img class='mui-image -rounded -js-lazy-load' src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' data-src='{{ page.thumb }}' alt='{{ page.title }} preview' itemprop='image'>
         <noscript>
-            <img class='mui-image' src='{{ page.thumb }}' alt='{{ page.title }} preview' itemprop='image'>
+            <img class='mui-image -rounded' src='{{ page.thumb }}' alt='{{ page.title }} preview' itemprop='image'>
         </noscript>
 
         {{ page.content | split:'<!--cut-->' | first }}
@@ -54,11 +56,13 @@ layout: default
         <!-- tags-list -->
         <div class='mui-tags-list' aria-label='Tags list for this post'>
             <div class='mui-tag-wrapper -icon'>
-                <svg class='mui-svg-icon'><use xlink:href='#svg-icon--tags'></use></svg>
+                <svg class='mui-svg-icon'>
+                    <use xlink:href='#mui-svg-icon--tags'></use>
+                </svg>
             </div>
             {% for tag in page.tags %}
                 <div class='mui-tag-wrapper' itemprop='keywords'>
-                    <a class='mui-tag -f-blue-4' href='/{{ site.tags_dir }}/{{ tag }}/'
+                    <a class='mui-tag' href='/{{ site.tags_dir }}/{{ tag }}/'
                             title='Search by tag {{ tag }}'>{{ tag }}</a>
                 </div>
             {% endfor %}
@@ -66,7 +70,7 @@ layout: default
         <!-- /tags-list -->
 
         <!-- share links -->
-        <div class='share-links'>
+        <div class='_separate-top-1'>
             <a class='mui-button -icon -white -green-3-bg -f-white -f-blue-4-bg' target='_blank' href='https://twitter.com/home?status=@sfi0zy - {{ page.title }} - {{ page.url  | prepend: site.baseurl | prepend: site.url }}' title='Share this page on Twitter'><i class='fa fa-twitter'></i></a>
             <a class='mui-button -icon -white -green-3-bg -f-white -f-blue-4-bg' target='_blank' href='http://vk.com/share.php?url={{ page.url  | prepend: site.baseurl | prepend: site.url }}&title=@sfi0zy - {{ page.title }}' title='Share this page on VK'><i class='fa fa-vk'></i></a>
             <a class='mui-button -icon -white -green-3-bg -f-white -f-blue-4-bg' target='_blank' href='https://www.facebook.com/sharer/sharer.php?u={{ page.url  | prepend: site.baseurl | prepend: site.url }}' title='Share this page on Facebook'><i class='fa fa-facebook'></i></a>
@@ -79,7 +83,7 @@ layout: default
 
 <!-- comments -->
 <div class='mui-card -grey-3-bg _shadow-1 _separate-1'>
-    <div class='header -grey-5-bg -white _text-left'>
+    <div class='header _text-left'>
         <h2 class='_bigger-1 _padding-lr-1'>Comments (will be available soon)</h2>
     </div>
     <div class='content'>
@@ -102,10 +106,18 @@ layout: default
                 <div class='mui-input-wrapper _separate-1'>
                     <label class='mui-input-label'>Your email</label>
                     <div class='mui-input-hint'>
-                        <span>It will be hidden. We will generate unique avatar for you.</span>
+                        <span>It'll be hidden. We'll generate unique avatar for you.</span>
                         <span class='mui-input-indicator'>
-                            <span class='validicon'>✓</span>
-                            <span class='invalidicon'>✗</span>
+                            <span class='validicon'>
+                                <svg class='mui-svg-icon'>
+                                    <use xlink:href='#mui-svg-icon--check'></use>
+                                </svg>
+                            </span>
+                            <span class='invalidicon'>
+                                <svg class='mui-svg-icon'>
+                                    <use xlink:href='#mui-svg-icon--close'></use>
+                                </svg>
+                            </span>
                         </span>
                     </div>
                     <div class='mui-input' data-regexp='^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$'>
@@ -129,7 +141,7 @@ layout: default
 
 <!-- similar-posts -->
 <div class='mui-card -white-bg _shadow-1 _separate-1'>
-    <div class='header -grey-5-bg -white _text-left'>
+    <div class='header _text-left'>
         <h2 class='_bigger-1 _padding-lr-1'>Related posts</h2>
     </div>
     <div class='content'>
@@ -149,7 +161,7 @@ layout: default
                         {% assign sameTagCounter = sameTagCounter | plus: 1%}
                         {% capture tagMarkup %}
                             <div class='mui-tag-wrapper _smaller-1'>
-                                <a class='mui-tag -f-blue-4' href='/{{ site.tags_dir }}/{{ tag }}' title='Search by tag {{ tag }}'>{{ tag }}</a>
+                                <a class='mui-tag' href='/{{ site.tags_dir }}/{{ tag }}' title='Search by tag {{ tag }}'>{{ tag }}</a>
                             </div>
                         {% endcapture %}
                         {% assign commonTags = commonTags | append: tagMarkup %}
@@ -162,13 +174,13 @@ layout: default
                 {% if maxRelated >= maxRelatedCounter %}
                     <div class='mui-row _padding-lr-1' itemscope itemtype='https://schema.org/Blog'>
                         <div class='mui-column -s12 -m4 _separate-1'>
-                            <img class='mui-image -js-lazy-load' data-src='{{ post.thumb }}' src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' alt='{{ post.title }} - post preview' itemprop='image'>
+                            <img class='mui-image -rounded -js-lazy-load' data-src='{{ post.thumb }}' src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' alt='{{ post.title }} - post preview' itemprop='image'>
                             <noscript>
-                                <img class='mui-image' src='{{ post.thumb }}' alt='{{ post.title }} - post preview' itemprop='image'>
+                                <img class='mui-image -rounded' src='{{ post.thumb }}' alt='{{ post.title }} - post preview' itemprop='image'>
                             </noscript>
                         </div>
                         <div class='mui-column -s12 -m8 _separate-1 _padding-lr-1'>
-                            <a class='-f-blue-4' href='{{ post.url }}' aria-label='Post {{ post.title }}' itemprop='url'>
+                            <a href='{{ post.url }}' aria-label='Post {{ post.title }}' itemprop='url'>
                                 <h3 class='_bigger-1' itemprop='headline'>{{ post.title }}</h3>
                             </a>
                             <div class='mui-row -grey-4 _smaller-1'>
@@ -187,14 +199,18 @@ layout: default
                                 {% endif %}
                                 {% if post.tags contains 'music' %}
                                     <span class='post-badge -separated' title='Music'>
-                                        <svg class='mui-svg-icon'><use xlink:href='#svg-icon--notes'></use></svg>
+                                        <svg class='mui-svg-icon'>
+                                            <use xlink:href='#mui-svg-icon--notes'></use>
+                                        </svg>
                                     </span>&nbsp;
                                 {% endif %}
                                 <span aria-label='Post publication date' itemprop='datePublished' datetime='{{ post.date | date: "%-d %B %Y" }}'>{{ post.date | date: '%B %-d, %Y' }}</span>
                             </div>
                             <div class='mui-tags-list'>
                                 <div class='mui-tag-wrapper -icon _smaller-1'>
-                                    <svg class='mui-svg-icon'><use xlink:href='#svg-icon--tags'></use></svg>
+                                    <svg class='mui-svg-icon'>
+                                        <use xlink:href='#mui-svg-icon--tags'></use>
+                                    </svg>
                                 </div>
                                 {{ commonTags }}
                             </div>
@@ -230,9 +246,9 @@ layout: default
                     {% if maxRelated >= maxRelatedCounter %}
                         <div class='mui-row _padding-lr-1' itemscope itemtype='https://schema.org/Blog'>
                             <div class='mui-column -s12 -m4 _separate-1'>
-                                <img class='mui-image -js-lazy-load' data-src='{{ post.thumb }}' src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' alt='{{ post.title }} - post preview' itemprop='image'>
+                                <img class='mui-image -rounded -js-lazy-load' data-src='{{ post.thumb }}' src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' alt='{{ post.title }} - post preview' itemprop='image'>
                                 <noscript>
-                                    <img class='mui-image' src='{{ post.thumb }}' alt='{{ post.title }} - post preview' itemprop='image'>
+                                    <img class='mui-image -rounded' src='{{ post.thumb }}' alt='{{ post.title }} - post preview' itemprop='image'>
                                 </noscript>
                             </div>
                             <div class='mui-column -s12 -m8 _separate-1 _padding-lr-1'>
@@ -255,14 +271,18 @@ layout: default
                                     {% endif %}
                                     {% if post.tags contains 'music' %}
                                         <span class='post-badge -separated' title='Music'>
-                                            <svg class='mui-svg-icon'><use xlink:href='#svg-icon--notes'></use></svg>
+                                            <svg class='mui-svg-icon'>
+                                                <use xlink:href='#mui-svg-icon--notes'></use>
+                                            </svg>
                                         </span>
                                     {% endif %}
                                     <span aria-label='Post publication date' itemprop='datePublished' datetime='{{ post.date | date: "%-d %B %Y" }}'>{{ post.date | date: '%B %-d, %Y' }}</span>
                                 </div>
                                 <div class='mui-tags-list'>
                                     <div class='mui-tag-wrapper -icon _smaller-1'>
-                                        <svg class='mui-svg-icon'><use xlink:href='#svg-icon--tags'></use></svg>
+                                        <svg class='mui-svg-icon'>
+                                            <use xlink:href='#mui-svg-icon--tags'></use>
+                                        </svg>
                                     </div>
                                     {{ commonTags }}
                                 </div>
