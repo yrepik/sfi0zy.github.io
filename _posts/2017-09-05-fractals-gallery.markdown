@@ -82,10 +82,10 @@ Several years ago I wrote my first renderer of the Mandelbrot set. It was amazin
 </div>
 
 <div class='mui-media-view -full-width _separate-1'>
-    <img class='mui-image -rounded -js-lazy-load' data-src='/images/913a5fb6d8f64b21b209e0d101962215.jpg' src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' alt='Image 10' itemprop='image'>
+    <img class='mui-image -rounded -js-lazy-load' data-src='/images/b4e6d7addf69914706fda7cae48c34f3.jpg' src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' alt='Image 10' itemprop='image'>
     <noscript>
-        <img class='mui-image -rounded' data-src='/images/913a5fb6d8f64b21b209e0d101962215.jpg' alt='Image 10' itemprop='image'>
+        <img class='mui-image -rounded' data-src='/images/b4e6d7addf69914706fda7cae48c34f3.jpg' alt='Image 10' itemprop='image'>
     </noscript>
-    <div class='description'>Rosette</div>
+    <div class='description'>Twins</div>
 </div>
 
