@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
     activateStickyAside();
-    generateAvatars();
 });
 
 
@@ -60,14 +59,3 @@ function activateStickyAside() {
     }
 }
 
-
-
-function generateAvatars() {
-    var _ = Muilessium.UTILS;
-
-    var avatars = document.querySelectorAll('.custom-avatar');
-
-    _.forEach(avatars, function(avatar) {
-        Ucavatar(avatar, _.getAttribute(avatar, 'data-email'), 64);
-    });    
-}
