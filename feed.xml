@@ -6,9 +6,62 @@
 </description>
     <link>https://sfi0zy.github.io/</link>
     <atom:link href="https://sfi0zy.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 21 Nov 2018 17:46:13 +0300</pubDate>
-    <lastBuildDate>Wed, 21 Nov 2018 17:46:13 +0300</lastBuildDate>
+    <pubDate>Thu, 29 Nov 2018 22:31:14 +0300</pubDate>
+    <lastBuildDate>Thu, 29 Nov 2018 22:31:14 +0300</lastBuildDate>
     <generator>Jekyll v3.8.3</generator>
+    
+      <item>
+        <title>TechContent challenge</title>
+        <description>&lt;p&gt;I took part in the TechContent challenge. This is a challenge for IT-authors organized by Habr - the biggest Russian platform for blogging. I won an award in the nomination “Programming” with my &lt;a href=&quot;https://habr.com/post/420847/&quot;&gt;article about WebGL shaders&lt;/a&gt;. It’s really cool.&lt;/p&gt;
+
+&lt;div class=&quot;mui-media-view -full-width _separate-1&quot;&gt;
+    &lt;img class=&quot;mui-image -rounded -js-lazy-load&quot; src=&quot;data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7&quot; data-src=&quot;/images/b2d9959874a3b104f024c54b77dd92ae.jpg&quot; alt=&quot;Sertificate&quot; itemprop=&quot;image&quot; /&gt;
+    &lt;noscript&gt;
+        &lt;img class=&quot;mui-image -rounded&quot; src=&quot;/images/b2d9959874a3b104f024c54b77dd92ae.jpg&quot; alt=&quot;Sertificate&quot; itemprop=&quot;image&quot; /&gt;
+    &lt;/noscript&gt;
+    &lt;div class=&quot;description&quot;&gt;Sertificate&lt;/div&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Thu, 29 Nov 2018 00:00:00 +0300</pubDate>
+        <link>https://sfi0zy.github.io/other/techcontent-challenge</link>
+        <guid isPermaLink="true">https://sfi0zy.github.io/other/techcontent-challenge</guid>
+        
+        <category>habrahabr</category>
+        
+        <category>webgl</category>
+        
+        <category>other</category>
+        
+        
+        <category>other</category>
+        
+      </item>
+    
+      <item>
+        <title>SVG placeholders</title>
+        <description>&lt;p&gt;New article! This time we’ll create nice SVG placeholders using Voronoi diagram and triangulation. The article is &lt;a href=&quot;https://habr.com/post/431232/&quot;&gt;available on Habr.com&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 28 Nov 2018 00:00:00 +0300</pubDate>
+        <link>https://sfi0zy.github.io/publications/svg-placeholders</link>
+        <guid isPermaLink="true">https://sfi0zy.github.io/publications/svg-placeholders</guid>
+        
+        <category>svg</category>
+        
+        <category>javascript</category>
+        
+        <category>ux</category>
+        
+        <category>github</category>
+        
+        <category>publications</category>
+        
+        <category>habrahabr</category>
+        
+        
+        <category>publications</category>
+        
+      </item>
     
       <item>
         <title>Schizotypal disorder</title>
@@ -220,57 +273,6 @@
         
         
         <category>publications</category>
-        
-      </item>
-    
-      <item>
-        <title>Pieces for piano</title>
-        <description>&lt;p&gt;My new book has been published this week. This is a collection of easy pieces for piano those I wrote last year.&lt;/p&gt;
-
-&lt;p&gt;The free preview is &lt;a href=&quot;/files/И. А. Богачев - Нотная тетрадь №1 (стр 11 15 28 42 77).pdf&quot;&gt;available here&lt;/a&gt;, but I’m not selling it like my previous book (it was about &lt;a href=&quot;https://sfi0zy.github.io/other/flamenco-guitar&quot;&gt;flamenco guitar&lt;/a&gt;). If you are living in Moscow, interested in my music and want to get one book, you can contact me via email.&lt;/p&gt;
-
-</description>
-        <pubDate>Fri, 08 Jun 2018 00:00:00 +0300</pubDate>
-        <link>https://sfi0zy.github.io/publications/pieces-for-piano</link>
-        <guid isPermaLink="true">https://sfi0zy.github.io/publications/pieces-for-piano</guid>
-        
-        <category>publications</category>
-        
-        <category>books</category>
-        
-        <category>music</category>
-        
-        
-        <category>publications</category>
-        
-      </item>
-    
-      <item>
-        <title>Loaders (WebGL shaders)</title>
-        <description>&lt;p&gt;I’m still experimenting with shaders and I’ve created a couple of nice loaders. Do you think that WebGL shaders were created for something else? Maybe you’re right… but it’s easy to create interesting effects with them.&lt;/p&gt;
-
-&lt;p data-height=&quot;420&quot; data-theme-id=&quot;light&quot; data-slug-hash=&quot;LrPWRq&quot; data-default-tab=&quot;js,result&quot; data-user=&quot;sfi0zy&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Loader (WebGL shader)&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;https://codepen.io/sfi0zy/pen/LrPWRq/&quot;&gt;Loader (WebGL shader)&lt;/a&gt; by Ivan Bogachev (&lt;a href=&quot;https://codepen.io/sfi0zy&quot;&gt;@sfi0zy&lt;/a&gt;) on &lt;a href=&quot;https://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;This is an experiment and I think we shouldn’t do it in production. The performance is very bad, especially on mobile devices. It’s better to use SVG here.&lt;/p&gt;
-
-&lt;p data-height=&quot;420&quot; data-theme-id=&quot;light&quot; data-slug-hash=&quot;MXgGZG&quot; data-default-tab=&quot;js,result&quot; data-user=&quot;sfi0zy&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Loader (WebGL shader 2)&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;https://codepen.io/sfi0zy/pen/MXgGZG/&quot;&gt;Loader (WebGL shader 2)&lt;/a&gt; by Ivan Bogachev (&lt;a href=&quot;https://codepen.io/sfi0zy&quot;&gt;@sfi0zy&lt;/a&gt;) on &lt;a href=&quot;https://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
-&lt;script async=&quot;&quot; src=&quot;https://static.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
-
-</description>
-        <pubDate>Mon, 28 May 2018 00:00:00 +0300</pubDate>
-        <link>https://sfi0zy.github.io/codepen/loaders-webgl-shaders</link>
-        <guid isPermaLink="true">https://sfi0zy.github.io/codepen/loaders-webgl-shaders</guid>
-        
-        <category>javascript</category>
-        
-        <category>webgl</category>
-        
-        <category>ux</category>
-        
-        <category>codepen</category>
-        
-        
-        <category>codepen</category>
         
       </item>
     
