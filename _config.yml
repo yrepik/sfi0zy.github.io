@@ -49,7 +49,7 @@ tags_dir: 'tag'
 # PAGINATION
 # ------------------------------------------------------------------------------
 
-paginate: 5
+paginate: 10
 paginate_path: '/page:num/'
 
 
