@@ -4,7 +4,7 @@ title:  "TechContent challenge"
 date:   2018-11-29 00:00:00 +0300
 categories: other
 tags: [habrahabr, webgl, other]
-thumb: "/images/588861df9c2ca08af906d7a270b40a06.jpg"
+thumb: "/images/4f70e20db13f26fa607a5badf333982a.jpg"
 ---
 
 I took part in the TechContent challenge. This is a challenge for IT-authors organized by Habr - the biggest Russian platform for blogging. I won an award in the nomination "Programming" with my <a href='https://habr.com/post/420847/'>article about WebGL shaders</a>. It's really cool.
@@ -17,4 +17,6 @@ I took part in the TechContent challenge. This is a challenge for IT-authors org
     </noscript>
     <div class='description'>Sertificate</div>
 </div>
+
+The results of the challenge are published <a href='https://habr.com/company/tm/blog/431936/'>here</a>.
 
